@@ -46,8 +46,8 @@ Control dancers via a Wi-Fi router.
 $ npm i
 $ npm run build
 ```
-the program will automatically generate new `boards_config.json`
-3. on RPi, (make sure we use new generated `boards_config.json`)
+
+the program will automatically generate new `boards_config.json` 3. on RPi, (make sure we use new generated `boards_config.json`)
 
 ```bash
 $ cd client/clientApp
@@ -65,13 +65,15 @@ $ sudo node client.js
 9. you can now send command to your boards!!
 
 #### afterward usage
-1. 
+
+1.
+
 ```bash
 $ npm start
 ```
 
-2. on your laptop(server), go to http://localhost:8080  
-3. the rest is the same(RPi, ESP8266)  
+2. on your laptop(server), go to http://localhost:8080
+3. the rest is the same(RPi, ESP8266)
 
 ### Client
 
@@ -101,7 +103,7 @@ npm install webpack -g
 ```
 
 4. build
-> usage for develop front-end:
+   > usage for develop front-end:
 
 ```bash
 npm run editor:dev
@@ -160,6 +162,7 @@ npm start
 
 1. ADD the picture to asset/LED/LED_CHEST or LED_L_SHOE or LED_R_SHOE
 2. Go data/load.json, add new LED name to valid "Texture":
+
 ```json
 "Texture": {
   "LED_CHEST": ["bl_chest", "chest1", "chest2"],

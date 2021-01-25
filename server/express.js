@@ -1,22 +1,3 @@
-// import express from "express"
-
-// import path from "path"
-
-// import CmdServer from './CmdServer.js'
-
-// import CONTROL from '../data/control_test3.json'
-
-// const ntp = require('ntp2');
-
-// const ntp_server = ntp.createServer(function(message, response){
-//   console.log('server message:', message);
-//   message.transmitTimestamp = Date.now();
-//   response(message);
-// }).listen(123,"192.168.1.6", function(err){
-//     // console.log(ntp_server.address().ip)
-//   console.log('server is running at %s', ntp_server.address().port);
-// });
-
 const CmdServer = require("./CmdServer");
 
 const path = require("path");
@@ -84,25 +65,12 @@ ntp_server.on("listening", function () {
 
 ntp_server.bind(1230);
 
-// const webpack = require('webpack')
-// const webpack_config = require('../webpack.config')
-// const compiler = webpack(webpack_config)
-
-// const webpackDevMiddleware = require('webpack-dev-middleware')(
-//     compiler,
-//     webpack_config.devServer
-// )
-// const webpackHotMiddleware  = require('webpack-hot-middleware')(
-//     compiler
-// )
 const staticMiddleware = express.static("editor/dist");
 const server = express();
 const PORT = 8080;
 
 let CONTROL = [];
 
-// server.use(webpackDevMiddleware)
-// server.use(webpackHotMiddleware)
 server.use(staticMiddleware);
 server.use(express.json({ limit: "1000mb" }));
 
