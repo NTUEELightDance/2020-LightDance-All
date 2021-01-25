@@ -9,7 +9,6 @@ const rimraf = require("rimraf");
 console.log("test");
 let time_out_id = -1;
 
-
 const SERVER_MAC = ""; //CONFIG.settings.server_mac_addr
 const PORT = 8081;
 const TIME_SERVER_PORT = 2222;
@@ -100,14 +99,6 @@ function mainSocket() {
       connection.send(JSON.stringify(response_msg));
       console.log(`ACKc time_ok sent`);
     }
-
-    // if(parse_msg.t3==0)
-    // {
-    //     parse_msg.t23 = Math.floor(new Date()/1)
-    // }else{
-
-    // }
-    //   require('child_process').exec('sudo sudo date --set ' + msg.toString(), function (msg) { console.log(msg) });
   });
 
   function heartbeat(x) {
