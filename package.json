@@ -30,7 +30,7 @@
     "@babel/runtime": "^7.8.4",
     "@fortawesome/fontawesome-free": "^5.12.1",
     "arp": "0.0.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "child_process": "^1.0.2",
     "dgram": "^1.0.1",
     "express": "^4.17.1",
